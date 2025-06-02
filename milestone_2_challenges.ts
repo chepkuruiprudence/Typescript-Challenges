@@ -185,3 +185,13 @@ function linearSearchAll(arr:number[], value: number) {
 
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+
+// Challenge 14:Count Occurrences
+
+function countOccurences(array: any[]){
+ const counts: { [key: string]: number } = {};
+
+ array.forEach(item => counts[item] = (counts[item] || 0) + 1);
+
+ return counts;
+}
