@@ -130,7 +130,7 @@ console.log(perimeterTwo("s", 7));
 console.log(perimeterTwo("c", 4));
 
 // Challenge 11: Sum of even numbers
-function sumEvenNumbers(n : number) : void{
+function sumEvenNumber(n : number) : void{
  let sum =0;
  for (let i=1; i <= n; i++){
   if (i%2 == 0){
@@ -140,9 +140,9 @@ function sumEvenNumbers(n : number) : void{
 console.log(sum);
 }
 
-sumEvenNumbers(6); 
-sumEvenNumbers(10);
-sumEvenNumbers(5);
+sumEvenNumber(6); 
+sumEvenNumber(10);
+sumEvenNumber(5);
 
 // Challenge 12: Multiply by itself
 function powerUp(num : number, times : number): number{
