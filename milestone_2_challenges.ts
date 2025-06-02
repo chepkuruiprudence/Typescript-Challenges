@@ -141,3 +141,17 @@ sum+=array[i];
 console.log(average([2, 4, 6, 8]));
 
 console.log(average([]));
+
+// Challenge 11:Linear Search
+
+function linearSearch(array: number[], value: number){
+ for (let i=0; i< array.length; i++){
+  if(array[i]==value){
+    return i;
+  }
+ }
+ return -1;
+}
+
+console.log(linearSearch([5, 3, 7, 1, 4], 7));
+console.log(linearSearch([5, 3, 7, 1, 4], 10));
