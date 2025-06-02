@@ -25,3 +25,27 @@ function findMax(num : number[]){
 }
 
 console.log(findMax([3, 7, 2, 9, 5]));
+
+// Challenge 3:Election winner
+
+function findWinner(arr : { name: string; votes: number }[]) {
+ let maxVotes = 0;
+ let winner = {};
+
+ for (let i = 0; i < arr.length; i++) {
+   if (arr[i].votes > maxVotes) {
+     maxVotes = arr[i].votes;
+     winner = arr[i];
+   }
+ }
+
+ return winner;
+}
+
+const candidates = [
+ { name: "Alice", votes: 50 },
+ { name: "Bob", votes: 75 },
+ { name: "Charlie", votes: 65 }
+];
+
+console.log(findWinner(candidates));; 
