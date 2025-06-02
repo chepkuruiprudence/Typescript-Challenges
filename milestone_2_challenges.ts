@@ -114,7 +114,7 @@ console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
 
 // Challenge 9 :Count Truthy
 
-function countTruthy(obj: { [key: string]: any }){
+function countTruthy(obj: Record<string, null | boolean | string | number>){
  let count = 0;
  for(let key in obj){
    if (obj[key]){
@@ -188,7 +188,7 @@ console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
 
 // Challenge 14:Count Occurrences
 
-function countOccurences(array: any[]){
+function countOccurences(array: (string | number)[]){
  const counts: { [key: string]: number } = {};
 
  array.forEach(item => counts[item] = (counts[item] || 0) + 1);
@@ -199,8 +199,8 @@ function countOccurences(array: any[]){
 
 // Challenge 15:Remove Duplicates
 
-function removeDuplicates(array: any[]){
- const newArray: any[] = [];
+function removeDuplicates(array: number[]){
+ const newArray: number[] = [];
 
  for (let i = 0; i < array.length; i++){
    let value = array[i];
@@ -215,10 +215,10 @@ function removeDuplicates(array: any[]){
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
 
 // Challenge 16:Most Frequent
-function mostFrequent(array){
+function mostFrequent(array : number[] | string[]){
   const countMap = {};
   let maxCount = 0;
-  let mostFrequentValue;  
+  let mostFrequentValue: number | string = array[0];  
 
   for (let i = 0; i < array.length; i++){
     let item = array[i];
