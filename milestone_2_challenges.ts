@@ -124,3 +124,20 @@ function countTruthy(obj: { [key: string]: any }){
  return count;
 }
 console.log (countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
+
+// Challenge 10:Average of Numbers
+
+function average(array: number[]){
+ if (array.length ==0) return 0;
+ let sum =0;
+
+ for (let i=0; i<array.length; i++){
+sum+=array[i];
+
+ }
+ return sum/array.length;
+};
+
+console.log(average([2, 4, 6, 8]));
+
+console.log(average([]));
