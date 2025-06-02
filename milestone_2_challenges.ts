@@ -93,3 +93,21 @@ return sum;
 }
 
 console.log (sumEvenNumbers([1, 2, 3, 4, 5, 6]));
+
+// Challenge 8 :Difference Between Sum of Even and Odd Numbers
+
+function differenceEvenOdd(numbers: number[]){
+ let sumEven = 0;
+ let sumOdd = 0;
+
+ numbers.forEach(function(num){
+   if (num%2==0){
+     sumEven+=num;
+   }else{
+     sumOdd+=num;
+   }
+ });
+ return sumEven-sumOdd;
+}
+
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
