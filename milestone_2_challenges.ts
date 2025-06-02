@@ -70,3 +70,11 @@ function countProperties(obj:{name:string, age: number, city:string}){
  }
  
  console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));
+
+ // Challenge 6:filter by length
+function filterByLength(strings: string[], minLength: number){
+ return strings.filter(function(str){
+  return str.length >= minLength;
+ })
+}
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
