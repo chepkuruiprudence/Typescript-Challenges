@@ -195,3 +195,21 @@ function countOccurences(array: any[]){
 
  return counts;
 }
+
+
+// Challenge 15:Remove Duplicates
+
+function removeDuplicates(array: any[]){
+ const newArray: any[] = [];
+
+ for (let i = 0; i < array.length; i++){
+   let value = array[i];
+   if (!newArray.includes(value)){
+     newArray.push(value);
+   }
+ }
+   return newArray;
+ 
+}
+
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
