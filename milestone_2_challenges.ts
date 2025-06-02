@@ -10,3 +10,18 @@ function sumOfPositives(numbers: number[]){
 }
 
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8]))
+
+// Challenge 2: Maximum value
+function findMax(num : number[]){
+ let largestNum = num[0];
+
+ for (let i = 1; i < num.length; i++){
+   let currentnum = num[i];
+   if (currentnum > largestNum){
+     largestNum = currentnum;
+   }
+ }
+ return largestNum;
+}
+
+console.log(findMax([3, 7, 2, 9, 5]));
