@@ -114,10 +114,10 @@ console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
 
 // Challenge 9 :Count Truthy
 
-function countTruthy(obj: Record<string, null | boolean | string | number>){
+function countTruthy(obj :{[key: string]: unknown}){
  let count = 0;
- for(let key in obj){
-   if (obj[key]){
+ for(let value in Object.values(obj)){
+   if (value){
      count++;
    }
  }
